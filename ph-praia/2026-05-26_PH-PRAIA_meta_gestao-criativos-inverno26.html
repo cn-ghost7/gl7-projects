@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PH Praia — Gestão de Criativos Meta · Inverno 26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#f5f0e8;
+    --sand-light:#faf6f0;
+    --ocean:#3a5a6a;
+    --ocean-deep:#1f3a48;
+    --sunset:#c9876d;
+    --ink:#2a2622;
+    --ink-soft:#6b635a;
+    --line:#e8dfd2;
+    --green:#6b8e6f;
+    --rose:#b5747a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    color:var(--ink);
+    background:var(--sand-light);
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:880px;margin:0 auto;padding:48px 32px 80px}
+  @media (max-width:640px){.container{padding:32px 20px 60px}}
+
+  /* HEADER */
+  header.cover{
+    background:linear-gradient(135deg,var(--ocean-deep) 0%,var(--ocean) 100%);
+    color:var(--sand-light);
+    padding:64px 32px 56px;
+    text-align:center;
+    border-radius:0 0 4px 4px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.cover::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:radial-gradient(ellipse at top right,rgba(201,135,109,0.18),transparent 60%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--sunset);
+    font-weight:500;
+    margin-bottom:16px;
+    position:relative;
+  }
+  h1.title{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-weight:500;
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.15;
+    margin-bottom:12px;
+    letter-spacing:-0.5px;
+    position:relative;
+  }
+  h1.title em{font-style:italic;font-weight:400;color:var(--sunset)}
+  .subtitle{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:18px;
+    color:rgba(245,240,232,0.85);
+    font-weight:400;
+    margin-bottom:32px;
+    position:relative;
+  }
+  .meta-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:20px;
+    max-width:600px;
+    margin:0 auto;
+    padding-top:24px;
+    border-top:1px solid rgba(245,240,232,0.2);
+    position:relative;
+  }
+  .meta-item{text-align:center}
+  .meta-label{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    opacity:0.7;
+    margin-bottom:4px;
+  }
+  .meta-value{
+    font-family:'Cormorant Garamond',serif;
+    font-size:16px;
+    font-weight:500;
+  }
+
+  /* SECTIONS */
+  section{margin-top:64px}
+  h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:32px;
+    line-height:1.25;
+    margin-bottom:8px;
+    color:var(--ocean-deep);
+    letter-spacing:-0.3px;
+  }
+  h2 .num{
+    font-family:'Inter',sans-serif;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:3px;
+    color:var(--sunset);
+    display:block;
+    margin-bottom:8px;
+    text-transform:uppercase;
+  }
+  h2 + .lead{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--ink-soft);
+    margin-bottom:32px;
+    max-width:680px;
+  }
+  h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:24px;
+    margin:32px 0 12px;
+    color:var(--ocean-deep);
+  }
+  h4{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--ocean);
+    margin:24px 0 12px;
+  }
+  p{margin-bottom:16px;color:var(--ink)}
+  strong{font-weight:600;color:var(--ocean-deep)}
+  em{font-style:italic}
+  ul,ol{padding-left:22px;margin-bottom:16px}
+  li{margin-bottom:8px}
+
+  /* CALLOUT */
+  .callout{
+    background:linear-gradient(135deg,var(--sand) 0%,#ede4d3 100%);
+    border-left:3px solid var(--sunset);
+    padding:28px 32px;
+    margin:32px 0;
+    border-radius:2px;
+  }
+  .callout .kicker{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--sunset);
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .callout .big{
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    line-height:1.35;
+    color:var(--ocean-deep);
+    font-weight:500;
+  }
+  .callout .big em{color:var(--sunset);font-weight:600;font-style:italic}
+
+  /* TABLES */
+  .table-wrap{
+    overflow-x:auto;
+    margin:24px 0;
+    border-radius:4px;
+    border:1px solid var(--line);
+    background:white;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+  th,td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  th{
+    background:var(--sand);
+    font-weight:600;
+    color:var(--ocean-deep);
+    font-size:12px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:var(--sand-light)}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  td .pill{
+    display:inline-block;
+    padding:2px 10px;
+    border-radius:12px;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.3px;
+  }
+  .pill.win{background:#e3ecdf;color:var(--green)}
+  .pill.warn{background:#f5e6d3;color:#a06438}
+  .pill.bad{background:#f1dde0;color:var(--rose)}
+  .pill.neutral{background:#e4e7ec;color:#4a5568}
+
+  /* BLOCKS (4 production blocks) */
+  .block{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:32px;
+    margin:24px 0;
+    position:relative;
+  }
+  .block.priority-1{border-left:4px solid var(--sunset)}
+  .block.priority-2{border-left:4px solid var(--ocean)}
+  .block.priority-3{border-left:4px solid var(--green)}
+  .block.priority-4{border-left:4px solid var(--ink-soft)}
+  .block-header{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:8px;
+  }
+  .block-header h3{margin:0}
+  .priority-tag{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:2px;
+  }
+  .priority-1 .priority-tag{background:var(--sunset);color:white}
+  .priority-2 .priority-tag{background:var(--ocean);color:white}
+  .priority-3 .priority-tag{background:var(--green);color:white}
+  .priority-4 .priority-tag{background:var(--ink-soft);color:white}
+  .block-why{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:17px;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+    padding-left:16px;
+    border-left:2px solid var(--line);
+  }
+  .quantity-badge{
+    display:inline-block;
+    background:var(--sand);
+    padding:6px 14px;
+    border-radius:2px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ocean-deep);
+    margin:8px 0 16px;
+  }
+
+  /* CONCEITOS / STRUCTURE LIST */
+  .concept-list{list-style:none;padding-left:0;counter-reset:c}
+  .concept-list li{
+    counter-increment:c;
+    padding:12px 12px 12px 44px;
+    position:relative;
+    margin-bottom:8px;
+    background:var(--sand-light);
+    border-radius:2px;
+  }
+  .concept-list li::before{
+    content:counter(c);
+    position:absolute;
+    left:14px;
+    top:14px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--sunset);
+    width:20px;
+    text-align:center;
+  }
+  .concept-list li strong{display:block;margin-bottom:4px;color:var(--ocean-deep)}
+
+  /* STEPS (estrutura 4 atos do Reel) */
+  .steps{
+    display:grid;
+    gap:12px;
+    margin:16px 0;
+  }
+  .step{
+    display:flex;
+    gap:16px;
+    padding:14px 16px;
+    background:var(--sand-light);
+    border-radius:2px;
+  }
+  .step-time{
+    flex-shrink:0;
+    width:56px;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--sunset);
+    font-size:16px;
+  }
+  .step-text strong{display:block;margin-bottom:2px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+
+  /* CALENDAR */
+  .calendar table th{background:var(--ocean-deep);color:var(--sand-light)}
+  .calendar td.week{font-weight:600;color:var(--ocean-deep);background:var(--sand-light);width:160px}
+
+  /* TONE BOX */
+  .tone-box{
+    background:linear-gradient(135deg,#f5f0e8 0%,#ede4d3 100%);
+    padding:32px;
+    border-radius:4px;
+    margin:32px 0;
+  }
+  .tone-box blockquote{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ocean-deep);
+    margin:16px 0;
+    padding-left:20px;
+    border-left:3px solid var(--sunset);
+    line-height:1.4;
+  }
+
+  /* FOOTER */
+  footer{
+    margin-top:80px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:13px;
+  }
+  footer .logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    font-weight:500;
+    color:var(--ocean-deep);
+    letter-spacing:2px;
+    margin-bottom:8px;
+  }
+
+  /* PRINT */
+  @media print{
+    body{background:white;font-size:11pt}
+    .container{max-width:none;padding:0}
+    header.cover{background:var(--ocean-deep) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .block,.callout,.tone-box,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{page-break-inside:avoid;margin-top:32px}
+    .block{page-break-inside:avoid}
+  }
+
+  /* NAVIGATION (sticky toc) */
+  .toc{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:20px 24px;
+    margin:32px 0;
+  }
+  .toc-title{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+    font-weight:600;
+  }
+  .toc ol{
+    padding-left:20px;
+    columns:2;
+    column-gap:24px;
+  }
+  @media (max-width:540px){.toc ol{columns:1}}
+  .toc li{margin-bottom:6px;font-size:14px;break-inside:avoid}
+  .toc a{color:var(--ocean-deep);text-decoration:none;border-bottom:1px dotted var(--line);transition:border-color 0.2s}
+  .toc a:hover{border-bottom-color:var(--sunset)}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="eyebrow">PH Praia · GL7 · Maio 2026</div>
+  <h1 class="title">Gestão de Criativos<br><em>Coleção Inverno 26</em></h1>
+  <p class="subtitle">"Onda após onda" — direção de produção pras próximas 4 semanas</p>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="meta-label">Para</div>
+      <div class="meta-value">Aline & time PH</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Período analisado</div>
+      <div class="meta-value">Nov/25 → Mai/26</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Canal</div>
+      <div class="meta-value">Meta Ads</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Status</div>
+      <div class="meta-value">Rascunho · Revisão Celso</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<nav class="toc">
+  <div class="toc-title">Neste documento</div>
+  <ol>
+    <li><a href="#resumo">O que os números mostraram</a></li>
+    <li><a href="#bloco-1">Reels com influenciadoras</a></li>
+    <li><a href="#bloco-2">Estáticos com promessa</a></li>
+    <li><a href="#bloco-3">Teste de carrossel</a></li>
+    <li><a href="#bloco-4">O que parar de fazer</a></li>
+    <li><a href="#calendario">Calendário 4 semanas</a></li>
+    <li><a href="#tom">Tom de voz</a></li>
+    <li><a href="#specs">Specs técnicas</a></li>
+  </ol>
+</nav>
+
+<section id="resumo">
+  <h2><span class="num">Resumo</span>O que os números mostraram</h2>
+  <p class="lead">Olhamos todos os anúncios que rodaram no Meta Ads da PH nos últimos seis meses, sem complicação técnica. O que aprendemos é o que vai guiar a produção daqui pra frente.</p>
+
+  <p>Foram <strong>161 anúncios</strong>, <strong>R$ 49,8 mil</strong> em mídia, <strong>704 vendas atribuídas</strong> ao Meta. Um ROAS médio de 3,52x — saudável, mas com espaço claro pra subir.</p>
+
+  <div class="callout">
+    <div class="kicker">O grande aprendizado</div>
+    <div class="big">Conteúdo com <em>influenciadora</em> vendeu muito mais do que qualquer outro formato.</div>
+  </div>
+
+  <p>Os <strong>oito anúncios mais lucrativos</strong> da casa (tirando catálogo automático) são todos <strong>Reels da Carla Coutinho</strong> falando da coleção "Celebrar 30 anos". Eles geraram, sozinhos, <strong>mais vendas que todos os 75 estáticos juntos</strong>. Quando o rosto da marca aparece e conta uma história, a venda acontece.</p>
+
+  <h3>Resumo dos formatos</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de criativo</th>
+          <th>Como performou</th>
+          <th>Veredito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🎬 <strong>Reels com influenciadora</strong></td>
+          <td>Campeão de vendas. 320+ compras, ROAS 4,09x</td>
+          <td><span class="pill win">Produzir muito mais</span></td>
+        </tr>
+        <tr>
+          <td>🛒 <strong>Catálogo automático (DPA)</strong></td>
+          <td>Melhor retorno por real investido. ROAS 4,60x</td>
+          <td><span class="pill win">Manter e escalar</span></td>
+        </tr>
+        <tr>
+          <td>📸 <strong>Estático com promessa clara</strong></td>
+          <td>Funciona com copy direto. AD02 "Um biquíni feito para você" voando (ROAS 8,3x)</td>
+          <td><span class="pill warn">Produzir com critério</span></td>
+        </tr>
+        <tr>
+          <td>🎠 <strong>Carrossel</strong></td>
+          <td>Nunca foi testado de verdade. Só 5 ads, zero venda</td>
+          <td><span class="pill neutral">Testar agora</span></td>
+        </tr>
+        <tr>
+          <td>🔁 Boost de post sem estratégia</td>
+          <td>ROAS fraco (2,62x)</td>
+          <td><span class="pill bad">Parar</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">Produção</span>O que produzir nas próximas 4 semanas</h2>
+  <p class="lead">Quatro blocos, em ordem de prioridade. Total: <strong>13 criativos novos</strong> distribuídos ao longo do mês.</p>
+
+  <!-- BLOCO 1 -->
+  <div class="block priority-1" id="bloco-1">
+    <div class="block-header">
+      <span class="priority-tag">Prioridade máxima</span>
+      <h3>Bloco 1 — Reels com influenciadoras</h3>
+    </div>
+    <p class="block-why">"É o formato que mais vendeu nos últimos 6 meses. A Carla Coutinho sozinha gerou cerca de 350 vendas. Agora a missão é diversificar: novas caras, mantendo a mesma fórmula que funcionou."</p>
+
+    <div class="quantity-badge">6 Reels novos · 2 por semana · 3 semanas</div>
+
+    <h4>Formato técnico</h4>
+    <ul>
+      <li>Vertical 9:16, 15 a 30 segundos</li>
+      <li>Pensado pra ser assistido <strong>sem som</strong> (legenda burned-in nos primeiros 5s)</li>
+      <li>Foco no rosto da influenciadora nos primeiros 3 segundos (o "hook")</li>
+    </ul>
+
+    <h4>Estrutura sugerida em cada Reel</h4>
+    <div class="steps">
+      <div class="step">
+        <div class="step-time">0-3s</div>
+        <div class="step-text"><strong>Hook visual</strong>Influenciadora aparece com frase de impacto na boca dela ou texto cobre a tela. Ex: "Achei o biquíni que eu queria ter no Inverno", "Onda após onda, isso aqui me ganhou…"</div>
+      </div>
+      <div class="step">
+        <div class="step-time">4-15s</div>
+        <div class="step-text"><strong>Storytelling</strong>Ela conta por que escolheu a peça — sustentabilidade, conforto, cor, "feito para você".</div>
+      </div>
+      <div class="step">
+        <div class="step-time">16-25s</div>
+        <div class="step-text"><strong>Mostra a peça</strong>Vestindo, em movimento, em situação real do dia-a-dia (não pose estática).</div>
+      </div>
+      <div class="step">
+        <div class="step-time">26-30s</div>
+        <div class="step-text"><strong>CTA</strong>"Link na bio" / "Já tá na loja" + selo da coleção "Onda após onda".</div>
+      </div>
+    </div>
+
+    <h4>Perfil ideal de influenciadora <em style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-soft);font-family:'Cormorant Garamond',serif">(não precisa ser celebridade)</em></h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th style="width:30%">Arquétipo</th><th>Por quê</th><th>Onde achar</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🏖️ <strong>Cariocas de Ipanema/Leblon 30-50</strong></td><td>Persona Júlia direta. Lifestyle praia + sofisticação</td><td>Tags de praia, frequentadoras das lojas</td></tr>
+          <tr><td>🌴 <strong>Mulheres de Cabo Frio/Búzios</strong></td><td>DNA do segundo polo PH (3 lojas lá)</td><td>Comunidade local, busca por hashtag</td></tr>
+          <tr><td>🌱 <strong>Criadoras slow fashion / sustentáveis</strong></td><td>Diferencial #1 da marca (tecidos biodegradáveis)</td><td>Hashtags #slowfashion #modasustentavel</td></tr>
+          <tr><td>👩‍🎨 <strong>Artistas / criativas 40+</strong></td><td>A coleção "ressignificação" combina com narrativa de arte</td><td>Cena cultural RJ</td></tr>
+          <tr><td>🤰 <strong>Mães 35-45 / pós-parto</strong></td><td>Público fiel da marca (dados WhatsApp das lojas confirmam)</td><td>Comunidade mãe + lifestyle</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Cuidados</h4>
+    <ul>
+      <li>Não copiar a Carla — cada influenciadora traz a história dela</li>
+      <li>Tom Júlia: amiga próxima, nunca promocional puro</li>
+      <li>Slogan "Feliz do Seu Jeito" presente (verbal ou em texto)</li>
+    </ul>
+
+    <h4>Seis conceitos pra explorar</h4>
+    <ol class="concept-list">
+      <li><strong>"Eu olhei de novo e fiz diferente"</strong>Influenciadora conta o que mudou nela este inverno — a peça da coleção como símbolo.</li>
+      <li><strong>"Onda após onda"</strong>Sequência: praia de manhã + casa de tarde + jantar à noite com a mesma peça.</li>
+      <li><strong>"Feito para você"</strong>Influenciadora mostra como o "Monte Seu Biquíni" funcionou pra ela — gancho que a Ana quer evoluir.</li>
+      <li><strong>"Conforto sem peso"</strong>Vestindo a peça em situação real (yoga, caminhada, almoço), não em desfile.</li>
+      <li><strong>"Tecido que abraça"</strong>Close no tecido + sensação ao vestir + diferencial biodegradável.</li>
+      <li><strong>"30 anos vestindo mulher"</strong>Homenagem à marca pelos olhos da influenciadora (continuidade da campanha Celebrar).</li>
+    </ol>
+  </div>
+
+  <!-- BLOCO 2 -->
+  <div class="block priority-2" id="bloco-2">
+    <div class="block-header">
+      <span class="priority-tag">Prioridade média</span>
+      <h3>Bloco 2 — Estáticos com promessa clara</h3>
+    </div>
+    <p class="block-why">"O AD02 'Um biquíni feito para você' está com ROAS de 8,3x ativo agora. Quando o estático tem uma promessa óbvia em cima da foto, funciona. Quando é só foto bonita sem texto, não."</p>
+
+    <div class="quantity-badge">4 estáticos novos · 1 por semana</div>
+
+    <h4>Formato técnico</h4>
+    <ul>
+      <li>Quadrado 1080×1080 (feed) + Vertical 1080×1350 (feed) + Story 1080×1920</li>
+      <li>Cada conceito vira 3 tamanhos</li>
+      <li>Foto de alta qualidade — não usar foto de catálogo NuvemShop crua</li>
+    </ul>
+
+    <h4>O que cada estático precisa ter</h4>
+    <ul>
+      <li>✅ <strong>Uma frase-promessa grande</strong> na imagem (não só na legenda)</li>
+      <li>✅ Modelo vestindo (não a peça solta)</li>
+      <li>✅ Logo PH sutil no canto</li>
+      <li>✅ Cor de fundo respeitando a paleta da coleção</li>
+      <li>❌ NÃO usar layout de "promoção" com desconto grande</li>
+      <li>❌ NÃO sobrecarregar com 5 informações</li>
+    </ul>
+
+    <h4>Quatro conceitos</h4>
+    <ol class="concept-list">
+      <li><strong>"Um biquíni feito para você"</strong>Variação do winner — testar outra modelo, outra peça.</li>
+      <li><strong>"Onda após onda, conforto que fica"</strong>Peça de transição praia-cidade.</li>
+      <li><strong>"Feliz do Seu Jeito, este inverno"</strong>Slogan + coleção.</li>
+      <li><strong>"30 anos vestindo o seu Brasil"</strong>Institucional + venda.</li>
+    </ol>
+  </div>
+
+  <!-- BLOCO 3 -->
+  <div class="block priority-3" id="bloco-3">
+    <div class="block-header">
+      <span class="priority-tag">Prioridade baixa, estratégica</span>
+      <h3>Bloco 3 — Teste de carrossel</h3>
+    </div>
+    <p class="block-why">"A PH nunca testou carrossel de verdade. Os 5 que rodaram tiveram quase zero investimento. Não dá pra dizer que carrossel 'não funciona' sem testar. Marcas concorrentes de moda usam carrossel pra mostrar variações, e o Meta favorece o formato em 2026."</p>
+
+    <div class="quantity-badge">3 carrosséis · 1 por semana nas semanas 2, 3 e 4</div>
+
+    <h4>Formato técnico</h4>
+    <ul>
+      <li>5 a 8 cards por carrossel</li>
+      <li>Vertical 1080×1350</li>
+      <li>Card 1 = hook forte (frase + imagem aspiracional)</li>
+      <li>Cards 2-N = peças / storytelling</li>
+      <li>Card final = CTA + logo</li>
+    </ul>
+
+    <h4>Três conceitos pra testar</h4>
+    <ol class="concept-list">
+      <li><strong>"5 jeitos de usar o mesmo biquíni este inverno"</strong>Uma peça, cinco looks (manhã praia, almoço, tarde piscina, sunset, noite).</li>
+      <li><strong>"Monte seu biquíni: passo a passo"</strong>Explica o diferencial "Monte Seu Biquíni" em 6 cards — subexplorado, pedido direto da Ana.</li>
+      <li><strong>"A história de um biquíni PH"</strong>Origem do tecido biodegradável, estampa desenhada à mão, costura, peça pronta na cliente.</li>
+    </ol>
+  </div>
+
+  <!-- BLOCO 4 -->
+  <div class="block priority-4" id="bloco-4">
+    <div class="block-header">
+      <span class="priority-tag">Cortes</span>
+      <h3>Bloco 4 — O que parar de fazer</h3>
+    </div>
+    <ul>
+      <li>❌ <strong>Boost de post genérico</strong> sem repensar copy/CTA pro contexto de venda — ROAS abaixo da média da conta, não justifica o tempo de produção</li>
+      <li>❌ <strong>Estáticos sem promessa</strong> (foto de catálogo solta virando ad) — performance fraca</li>
+      <li>❌ <strong>Variações pequenas do mesmo criativo</strong> que canibalizam verba sem aprendizado novo</li>
+    </ul>
+  </div>
+</section>
+
+<section id="calendario" class="calendar">
+  <h2><span class="num">Cronograma</span>Calendário de 4 semanas</h2>
+  <p class="lead">Distribuição sugerida dos 13 criativos novos ao longo do mês. Ajustável conforme capacidade do time de produção.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Semana</th>
+          <th>Reels (Bloco 1)</th>
+          <th>Estáticos (Bloco 2)</th>
+          <th>Carrossel (Bloco 3)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="week">Semana 1<br><span style="font-weight:400;font-size:12px;color:var(--ink-soft)">27/Mai → 2/Jun</span></td>
+          <td>2 Reels com 2 influenciadoras diferentes</td>
+          <td>1 estático "Um biquíni feito para você" (variação)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="week">Semana 2<br><span style="font-weight:400;font-size:12px;color:var(--ink-soft)">3 → 9/Jun</span></td>
+          <td>2 Reels com mais 2 influenciadoras</td>
+          <td>1 estático "Onda após onda"</td>
+          <td>1 carrossel "5 jeitos de usar"</td>
+        </tr>
+        <tr>
+          <td class="week">Semana 3<br><span style="font-weight:400;font-size:12px;color:var(--ink-soft)">10 → 16/Jun</span></td>
+          <td>2 Reels (pode repetir 1 influencer que performou)</td>
+          <td>1 estático "Feliz do Seu Jeito"</td>
+          <td>1 carrossel "Monte seu biquíni"</td>
+        </tr>
+        <tr>
+          <td class="week">Semana 4<br><span style="font-weight:400;font-size:12px;color:var(--ink-soft)">17 → 23/Jun</span></td>
+          <td>Refresh ou reforço dos melhores</td>
+          <td>1 estático institucional 30 anos</td>
+          <td>1 carrossel "História do biquíni PH"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="text-align:center;margin-top:24px;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--ocean-deep)">Total em 4 semanas — <strong style="font-style:normal">6 Reels + 4 estáticos + 3 carrosséis = 13 criativos novos</strong></p>
+</section>
+
+<section id="tom" class="tone-section">
+  <h2><span class="num">Tom</span>Voz da marca — manter sempre</h2>
+  <p class="lead">Persona Júlia. Já documentada no briefing da marca. Aplica a Reels, estáticos, carrosséis — tudo.</p>
+
+  <div class="tone-box">
+    <h4 style="margin-top:0">Persona</h4>
+    <ul>
+      <li>Sofisticado, acolhedor, confiante</li>
+      <li>Linguagem elegante — <em>nunca</em> agressiva</li>
+      <li>"Amiga próxima" que inspira</li>
+      <li>Hashtags pra branding e alcance</li>
+    </ul>
+
+    <h4>Frases-âncora da coleção Inverno 26</h4>
+    <blockquote>"Onda após onda"</blockquote>
+    <blockquote>"Olhar de novo, fazer diferente e continuar Feliz do seu jeito"</blockquote>
+    <blockquote>"Tecidos que abraçam o corpo, cores vibrantes sem reluzir"</blockquote>
+    <blockquote>"Um inverno que acolhe sem pesar, que aquece sem endurecer"</blockquote>
+  </div>
+</section>
+
+<section id="specs">
+  <h2><span class="num">Especificações</span>Specs técnicas pro time de produção</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Formato</th><th>Dimensão</th><th>Duração</th><th>Notas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Reels</td><td>1080×1920 (9:16)</td><td>15-30s</td><td>Legenda nos 5 primeiros segundos. Áudio próprio, não trend</td></tr>
+        <tr><td>Estático Feed quadrado</td><td>1080×1080 (1:1)</td><td>—</td><td>Frase-promessa visível na imagem</td></tr>
+        <tr><td>Estático Feed vertical</td><td>1080×1350 (4:5)</td><td>—</td><td>Frase-promessa visível na imagem</td></tr>
+        <tr><td>Story</td><td>1080×1920 (9:16)</td><td>—</td><td>Mesma arte do feed, adaptada</td></tr>
+        <tr><td>Carrossel</td><td>1080×1350 por card</td><td>—</td><td>5-8 cards. Card 1 = hook</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">Próximos passos</span>O que acontece daqui</h2>
+  <ol>
+    <li><strong>Celso revisa este briefing</strong> e ajusta antes de enviar</li>
+    <li><strong>Aline recebe</strong> a versão final</li>
+    <li><strong>Reunião de produção</strong> (sugestão): alinhamento na 1ª semana pra travar Reels da Semana 1</li>
+    <li><strong>Acompanhamento:</strong> Claudiney faz audit rápida no Meta toda semana pra ver o que tá performando e ajustar a pauta</li>
+  </ol>
+</section>
+
+<footer>
+  <div class="logo">PH × GL7</div>
+  <p>Briefing baseado em auditoria de 161 anúncios entre 26/Nov/25 e 26/Mai/26<br>
+  Conta Meta act_806594518097336 · GL7 Performance · Claudiney & Celso</p>
+</footer>
+
+</div>
+
+</body>
+</html>

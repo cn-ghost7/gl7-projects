@@ -1,0 +1,27 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Editores
+.vscode/
+.idea/
+*.sublime-*
+
+# Sensíveis (defesa em profundidade — não commitar nunca)
+.env
+.env.*
+*.key
+*.pem
+*credentials*
+*secret*
+*token*
+*.csv
+*.xlsx
+*.xls
+
+# Drafts locais (não publicar)
+**/draft-*
+**/_draft/
+**/wip-*
