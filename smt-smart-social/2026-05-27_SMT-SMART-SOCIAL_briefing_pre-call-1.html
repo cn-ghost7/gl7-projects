@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Smart Social — Briefing pré-Call 1 · GL7 interno</title>
+<title>Smart Social — Briefing pré-Call 2 · GL7 interno · v2 pós-alinhamento</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,11 +40,10 @@
   .container{max-width:820px;margin:0 auto;padding:40px 28px 80px}
   @media (max-width:640px){.container{padding:24px 18px 60px}}
 
-  /* HEADER */
   header.top{
     border-bottom:1px solid var(--border);
     padding-bottom:24px;
-    margin-bottom:36px;
+    margin-bottom:32px;
   }
   .eyebrow{
     font-family:'JetBrains Mono',monospace;
@@ -73,23 +72,31 @@
   }
   .meta-row strong{color:var(--ink);font-weight:500}
 
-  /* CONFIDENTIALITY BANNER */
   .conf{
     background:rgba(255,138,122,0.08);
     border:1px solid rgba(255,138,122,0.25);
     border-left:3px solid var(--danger);
     padding:14px 18px;
     border-radius:4px;
-    margin-bottom:32px;
+    margin-bottom:24px;
     font-size:13.5px;
     color:var(--ink-soft);
   }
   .conf strong{color:var(--danger);font-weight:600}
 
-  /* SECTIONS */
-  section{
-    margin-bottom:36px;
+  .changelog{
+    background:rgba(125,211,252,0.06);
+    border:1px solid rgba(125,211,252,0.2);
+    border-left:3px solid var(--info);
+    padding:14px 18px;
+    border-radius:4px;
+    margin-bottom:32px;
+    font-size:13.5px;
+    color:var(--ink-soft);
   }
+  .changelog strong{color:var(--info);font-weight:600}
+
+  section{margin-bottom:36px}
   h2{
     font-weight:600;
     font-size:20px;
@@ -119,7 +126,6 @@
   li{margin-bottom:6px}
   li strong{color:var(--ink);font-weight:600}
 
-  /* CARD */
   .card{
     background:var(--bg-card);
     border:1px solid var(--border);
@@ -139,7 +145,6 @@
   }
   .card p:last-child{margin-bottom:0}
 
-  /* QUOTE */
   blockquote{
     border-left:3px solid var(--accent-soft);
     padding:12px 18px;
@@ -151,7 +156,6 @@
   }
   blockquote strong{font-style:normal}
 
-  /* TABLE */
   table{
     width:100%;
     border-collapse:collapse;
@@ -173,16 +177,6 @@
   }
   td{color:var(--ink-soft)}
 
-  /* PERSONAS-LIKE BOX */
-  .box-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    margin:14px 0;
-  }
-  @media (min-width:640px){.box-grid.two-col{grid-template-columns:1fr 1fr}}
-
-  /* CHECK */
   .check{
     display:flex;
     align-items:flex-start;
@@ -197,7 +191,6 @@
   }
   .check label{cursor:pointer;flex:1}
 
-  /* CALLOUT */
   .callout{
     background:linear-gradient(135deg,rgba(156,232,163,0.06),rgba(125,211,252,0.04));
     border:1px solid rgba(156,232,163,0.15);
@@ -213,7 +206,6 @@
   }
   .callout.danger strong{color:var(--danger)}
 
-  /* FOOTER */
   footer{
     margin-top:48px;
     padding-top:24px;
@@ -224,7 +216,6 @@
     text-align:center;
   }
 
-  /* CODE INLINE */
   code{
     font-family:'JetBrains Mono',monospace;
     font-size:13px;
@@ -233,258 +224,310 @@
     border-radius:3px;
     color:var(--info);
   }
+
+  .pillars{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    margin:14px 0;
+  }
+  @media (min-width:640px){.pillars{grid-template-columns:1fr 1fr}}
+  .pillar{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:16px 18px;
+  }
+  .pillar h4{
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:8px;
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+  }
+  .pillar p{font-size:14px;line-height:1.6;margin:0}
 </style>
 </head>
 <body>
 <div class="container">
 
 <header class="top">
-  <div class="eyebrow">GHOST LAB7 · BRIEFING INTERNO · MAI 2026</div>
-  <h1>Smart Social · <span class="highlight">Briefing pré-Call 1</span></h1>
+  <div class="eyebrow">GHOST LAB7 · BRIEFING INTERNO · v2 · PÓS-ALINHAMENTO 27/05</div>
+  <h1>Smart Social · <span class="highlight">Briefing pré-Call 2</span></h1>
   <div class="meta-row">
-    <span><strong>Cliente alvo:</strong> Smart Social (Luiz Felippe Correia)</span>
-    <span><strong>Audiência:</strong> Thiago Dam + Celso Netto</span>
-    <span><strong>Call 1:</strong> 2026-05-27 · 15h</span>
+    <span><strong>Lead:</strong> Luiz Felippe Correia (CEO Smart Social)</span>
+    <span><strong>Indicação:</strong> Fernando Matielli</span>
+    <span><strong>Call 2:</strong> sexta 2026-05-29 · 15h</span>
+    <span><strong>GL7:</strong> Thiago + Celso</span>
   </div>
 </header>
 
 <div class="conf">
-  <strong>CONFIDENCIAL · INTERNO GL7.</strong> Documento operacional pra preparar a Call 1. Não compartilhar com o lead. Complementar ao diagnóstico público em <code>github.ghostlab7.com.br/crm-smart-social</code>.
+  <strong>CONFIDENCIAL · INTERNO GL7.</strong> Briefing operacional pra Thiago + Celso prepararem a Call 2 (sexta 29/05). Não compartilhar com o lead. Complementar ao diagnóstico público em <code>github.ghostlab7.com.br/crm-smart-social</code> (que esse SIM vai pro Luiz).
 </div>
 
-<!-- ===== SEÇÃO 1 ===== -->
+<div class="changelog">
+  <strong>v2 (2026-05-27 pós-alinhamento Thiago+Celso).</strong> Decisões cravadas em call de alinhamento: <em>(1) foco geográfico = Copa do Mundo 2026 América do Norte (EUA+CA+MX), não LATAM puro · (2) pricing em USD, modelo 10% sobre mídia ≈ USD 5k/mês · (3) 2 produtos separados (Consultoria full + Setup/handoff) · (4) ICP em paralelo (Affiliate Manager + Head of Sponsorship) · (5) canais top = LinkedIn + Google + Instagram · (6) KPI desafiado: SQL > venda fechada · (7) call reagendada quarta → sexta a pedido do Gabriel.</em>
+</div>
+
+<!-- ===== 01 ===== -->
 <section>
   <h2><span class="num">01</span> Em 3 frases</h2>
-  <p><strong>Luiz Felippe Correia</strong> (CEO Smart Social, RJ) chegou via indicação do <strong>Fernando Matielli</strong> pro Thiago. A empresa dele conecta influenciadores com marcas de aposta online enterprise (1xBet, Stake, Pin-Up, Ubisoft, Garena, Twitch). Ele quer contratar a GL7 pra construir uma <strong>máquina de gerar clientes novos</strong> pra ele — hoje quase todo cliente vem do LinkedIn pessoal dele e de presença em eventos do setor.</p>
+  <p><strong>Luiz Felippe Correia</strong> (CEO Smart Social, ex-Hebrew U via Lemann, SBC Speaker 2024) chegou via indicação do <strong>Fernando Matielli</strong>. A empresa é hub LATAM de creator campaigns pra operadores enterprise iGaming (1xBet, Stake, Pin-Up, EstrelaBet, Mentos, Vasco, Ubisoft) — <strong>35+ clientes iGaming em 3 anos · 62k+ FTDs em 2024 · USD 50k/mês em mídia paga</strong>. Quer estruturar máquina B2B própria, com handoff pro <strong>Gabriel ("ciborgue" interno)</strong> operar depois.</p>
 </section>
 
-<!-- ===== SEÇÃO 2 ===== -->
+<!-- ===== 02 ===== -->
 <section>
-  <h2><span class="num">02</span> Quem é o Luiz (não é "mais um founder de agência")</h2>
-
+  <h2><span class="num">02</span> Quem é o Luiz (não é "mais um founder")</h2>
   <div class="card accent">
     <h4>Background fora da curva</h4>
     <ul>
-      <li><strong>1 de 20 selecionados no mundo</strong> pro Transdisciplinary Innovation Program da Hebrew University (Israel, 8 prêmios Nobel)</li>
-      <li><strong>Jorge Paulo Lemann</strong> ajudou ele financeiramente a fazer o curso. Estadão fez matéria em 2019</li>
-      <li>Passou pelo <strong>Gávea Angels</strong> com a Camila Farani (Shark Tank) — analisou 300+ startups</li>
-      <li>Foi Growth Hacker na <strong>Growth Team LLC</strong> (1ª agência growth hacking do BR)</li>
-      <li>Organizou o <strong>Hacking.Rio 2019</strong> (2k+ participantes — maior hackathon LATAM)</li>
-      <li><strong>5 anos e 8 meses</strong> de Smart Social — construiu até virar "um dos maiores media hubs da LATAM"</li>
-      <li><strong>Speaker oficial SBC Events 2024</strong>, indicado Best Marketing Agency SiGMA 2025, Top 5 Brazilian iGaming Summit</li>
+      <li><strong>1 de 20 selecionados no mundo</strong> pro Transdisciplinary Innovation Program da <strong>Hebrew University</strong> (Israel, 8 prêmios Nobel) — <strong>Jorge Paulo Lemann</strong> financiou. Matéria Estadão em 2019.</li>
+      <li>2 anos no <strong>Gávea Angels</strong> com Camila Farani (Shark Tank BR) — analisou 300+ startups.</li>
+      <li>Background técnico Hebrew U: Big Data + Computer Vision + Bioengineering.</li>
+      <li>Foi Growth Hacker na <strong>Growth Team LLC</strong> (1ª agência growth hacking BR).</li>
+      <li>Organizou <strong>Hacking.Rio 2019</strong> (2k+ participantes — maior hackathon LATAM).</li>
+      <li><strong>5 anos e 8 meses</strong> de Smart Social.</li>
+      <li><strong>SBC Speaker 2024</strong>, indicado <strong>SiGMA Best Marketing Agency 2025</strong>, Top 5 Brazilian iGaming Summit.</li>
     </ul>
   </div>
-
   <div class="callout">
-    <strong>Implicação prática.</strong> O cara fala linguagem de investidor — CAC, LTV, burn, payback, ARR, churn na ponta da língua. Não aceita retórica de agência. Vai testar a gente com <strong>2-3 perguntas táticas nos primeiros 5 minutos</strong>. Resposta direta vence pitch de logo bonito.
+    <strong>Implicação prática.</strong> Fala linguagem de investidor — CAC, LTV, burn, payback, ARR, churn na ponta da língua. Não aceita retórica de agência. Vai testar a gente com <strong>2-3 perguntas táticas nos primeiros 5 minutos</strong> da call. <strong>Resposta direta vence pitch.</strong>
   </div>
 </section>
 
-<!-- ===== SEÇÃO 3 ===== -->
+<!-- ===== 03 ===== -->
 <section>
-  <h2><span class="num">03</span> O que ele quer (sem enrolação)</h2>
-  <p>Quer alguém que <strong>pense estratégia de ads B2B com ele</strong>, não alguém que aperte botão. Tem uma pessoa interna que ele chama de "ciborgue" — esse cara executa. <strong>A GL7 entra como cérebro, o ciborgue como braço.</strong> Match perfeito com o que a gente quer vender.</p>
-
-  <table>
-    <tr><th>Meta declarada (90 dias)</th><th>Número</th></tr>
-    <tr><td>Contratos enterprise novos</td><td><strong>5 a 10</strong></td></tr>
-    <tr><td>Ticket Y1 mínimo enterprise</td><td>USD 60k</td></tr>
-    <tr><td>LTV teto</td><td>USD 500k+</td></tr>
-    <tr><td>Mídia paga/mês</td><td>USD 50k+ (~R$ 270k)</td></tr>
-    <tr><td>Capacidade comercial atual</td><td>2 SDRs + 1 AE (ociosos)</td></tr>
-  </table>
-</section>
-
-<!-- ===== SEÇÃO 4 ===== -->
-<section>
-  <h2><span class="num">04</span> Por que é uma boa pra GL7</h2>
+  <h2><span class="num">03</span> O ângulo central · Copa do Mundo 2026 América do Norte</h2>
+  <div class="callout">
+    <strong>Esse é o ângulo-mestre da Call 2.</strong> A Copa do Mundo 2026 acontece em <strong>EUA + Canadá + México</strong>. Patrocinadores enterprise (incluindo operadores iGaming buscando ativação) vão investir budgets atípicos pra ter presença nos mercados-sede. Smart Social opera sponsorship — janela é deles, e a entrada timing-perfect é agora (~13 meses antes do evento).
+  </div>
+  <p>Isso justifica:</p>
   <ul>
-    <li><strong>Lead aquecido</strong> — indicação do Matielli, que tem relação ativa GL7 via parceria Saving (Caio)</li>
-    <li><strong>Decisor sofisticado</strong> — briefing de 5 páginas estilo enterprise, fala em CAC/LTV/burn</li>
-    <li>Pede exatamente o que a gente sabe vender — <strong>consultoria estratégica, não execução crua</strong></li>
-    <li><strong>Faixa Tier 1 de budget</strong>, pricing pode até ser em USD (operação internacional)</li>
-    <li><strong>Janela World Cup 2026</strong> — mercado iGaming bombando, fechar até Jul/26 dá runway até o pico</li>
-    <li><strong>62k+ FTDs em 2024</strong> é número público no site — prova social robusta sem violar NDA</li>
+    <li><strong>Priorização geográfica:</strong> EUA + Canadá + México primeiro (não LATAM puro). LATAM expande na Wave 2/3.</li>
+    <li><strong>Pricing em USD:</strong> casa com o cliente final internacional deles.</li>
+    <li><strong>Persona B (Head of Sponsorship) ganha relevância:</strong> Copa = momento de brand equity e ativação esportiva, não só performance.</li>
+    <li><strong>Network do Luiz:</strong> ele já é SBC Speaker — autoridade pública iGaming. Amplificação founder vira ativo prime.</li>
   </ul>
 </section>
 
-<!-- ===== SEÇÃO 5 ===== -->
+<!-- ===== 04 ===== -->
 <section>
-  <h2><span class="num">05</span> 3 coisas pra ter na cabeça (riscos)</h2>
-
-  <div class="card warn">
-    <h4>1. Vertical apostas é novo pra GL7</h4>
-    <p>A gente nunca atendeu iGaming. Estratégia sugerida: operar sem expor publicamente (sem logo Smart Social no portfólio GL7). Honestidade total na call: "GL7 não tem case BR de iGaming — temos B2B regulado em outros verticais (Wärtsilä industrial, RIO aviação, ITA engenharia, OLV food enterprise). Framework B2B enterprise é nosso terreno. iGaming a gente aprende com você nos primeiros 30 dias."</p>
+  <h2><span class="num">04</span> Os 2 produtos GL7 (decisão Thiago+Celso)</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <h4>Produto 1 · Consultoria full-service</h4>
+      <p>Estratégia + execução. Pacote high-ticket que cobre arquitetura de funil, posicionamento, geração de demanda multi-canal, criativos, tracking server-side, LP, ghostwriting founder, war-room. <strong>É o cérebro + as mãos operacionais.</strong></p>
+    </div>
+    <div class="pillar">
+      <h4>Produto 2 · Setup (treinamento + handoff)</h4>
+      <p>Serviço separado de transferência de conhecimento pro <strong>Gabriel (ciborgue interno)</strong>. Treinamento estruturado, documentação operacional, playbook que ele opera depois dos 90 dias. Enquadrar como <strong>parceria estratégica de longo prazo</strong>, não fim em 90d.</p>
+    </div>
   </div>
-
-  <div class="card warn">
-    <h4>2. O "ciborgue" interno pode virar problema depois</h4>
-    <p>Hoje ele é parceiro. Daqui 3 meses, se a coisa não der resultado fácil, ele pode falar "agora a gente sabe o caminho, valeu". Mitigação contratual: relação semanal direta entre Celso e o Luiz (não só com o ciborgue), e separar escopo consultoria (GL7) × execução (ciborgue) desde o dia 1.</p>
-  </div>
-
-  <div class="card warn">
-    <h4>3. A matemática não fecha só com ads</h4>
-    <p>USD 50k/mês de mídia pra 5-10 contratos enterprise em 90 dias é viável, mas só funciona se a gente <strong>combinar ads + cold outreach + presença em evento (SBC, SiGMA)</strong>. Importante alinhar isso na call pra não vender milagre. Primeiros 30-45 dias são learning das plataformas, não escala.</p>
-  </div>
-</section>
-
-<!-- ===== SEÇÃO 6 ===== -->
-<section>
-  <h2><span class="num">06</span> 3 perguntas pra abrir a conversa (Celso faz)</h2>
-
-  <div class="card">
-    <h4>P1 · Situação real do funil</h4>
-    <p>"Hoje, dos contratos que vocês fecham, quanto vem do seu LinkedIn pessoal versus eventos versus indicação versus outbound? Me dá os percentuais."</p>
-    <p style="font-size:13px;color:var(--ink-muted)">→ Confirma se a máquina depende só dele. Se 70%+ for founder LinkedIn, sabemos que o ativo a destravar é <em>transferir a tese do founder pra máquina externa</em>.</p>
-  </div>
-
-  <div class="card">
-    <h4>P2 · A última dor concreta</h4>
-    <p>"Qual foi o último contrato grande que vocês perderam ou demoraram pra fechar — e por quê? Em qual estágio travou?"</p>
-    <p style="font-size:13px;color:var(--ink-muted)">→ Pega a dor real. O briefing deles diz que o medo do <em>cliente deles</em> é "incerteza de outcome" — essa pergunta espelha. É exatamente o medo que <em>ELES</em> vão ter ao contratar GL7. Mostrar que entendemos isso é gold.</p>
-  </div>
-
-  <div class="card">
-    <h4>P3 · Visão de sucesso (pergunta-armadilha-do-bem)</h4>
-    <p>"Se daqui 90 dias vocês fecharem 8 contratos novos, o que vai ter mudado do que vocês fazem hoje? O que vocês sabem que precisariam fazer mas ainda não fazem?"</p>
-    <p style="font-size:13px;color:var(--ink-muted)">→ Se ele responder "criativos, LP, tracking" → quer execução, é briga de preço. Se responder "tese, mensagem, parar de depender de mim" → quer estratégia, é nosso campo.</p>
-  </div>
-</section>
-
-<!-- ===== SEÇÃO 7 ===== -->
-<section>
-  <h2><span class="num">07</span> Como o Celso se vende (pitch curto, 2 min)</h2>
-
-  <blockquote>
-    <strong>Celso:</strong> "Cara, a maior parte das agências vende execução de tráfego — virou commodity. A GL7 vende <strong>diretoria de aquisição estratégica B2B</strong>: a gente desenha o sistema, define a tese, calibra a mensagem, valida canal e deixa a operação rodando. É exatamente o 'setup estratégico + apoio inicial' que você pediu."
-  </blockquote>
-
-  <blockquote>
-    "Vocês têm muito do que falta nos outros: founder ativo, lead magnet pronto, 62k FTDs como prova social, time de produção, capacidade comercial ociosa. <strong>O que falta é arquitetura.</strong> É onde a gente entra."
-  </blockquote>
-
-  <blockquote>
-    "O ciborgue de vocês é executor — vocês precisam dele pra escalar. A gente entrega o desenho + treina ele pra operar. Não competimos com ele."
-  </blockquote>
-
-  <blockquote>
-    "Honestidade total: GL7 não tem caso BR de iGaming. Atendemos B2B regulado em outros verticais (Wärtsilä, RIO Cargo, ITA Fogo, Grupo Olivers, parceria Saving). O framework B2B enterprise a gente tem. iGaming a gente aprende com vocês nos primeiros 30 dias — é pra isso que existe o setup."
-  </blockquote>
-</section>
-
-<!-- ===== SEÇÃO 8 ===== -->
-<section>
-  <h2><span class="num">08</span> Os 3 cenários comerciais (Thiago apresenta)</h2>
-
-  <p>O Thiago já mapeou no diagnóstico 3 cenários — vamos deixar o Luiz escolher (não impor um modelo único). Valores definitivos na Call 2.</p>
-
   <div class="card info">
-    <h4>Cenário A · Lean — setup estratégico + apoio inicial</h4>
-    <p>Alinhado ao que o Luiz pediu no WhatsApp ("setup estratégico talvez seja suficiente"). GL7 entrega tese + arquitetura de funil + tracking server-side + ghostwriting founder. Squad interno opera execução com o ciborgue.</p>
-  </div>
-
-  <div class="card info">
-    <h4>Cenário B · Médio — piloto 30 dias Brasil + LinkedIn</h4>
-    <p>Resposta direta à pergunta crítica "fazer 4 canais e 6 países em 90 dias é ambicioso, dá pra começar piloto BR+LinkedIn pra provar método?". GL7 executa LinkedIn + setup tracking + 2 personas + 1 GEO. Squad interno aprende método junto. Wave 2 escala depois.</p>
-  </div>
-
-  <div class="card info">
-    <h4>Cenário C · Full — 4 canais × 6 países em 90 dias</h4>
-    <p>O escopo declarado original no briefing. GL7 executa 100% — LinkedIn (40%) + Meta (25%) + Google (20%) + Telegram (15%) — todos 6 GEOs LATAM, dual-persona em paralelo. Sem subcontratação. Ghost amplia squad pra absorver.</p>
+    <h4>Modelo comercial · validar com Warren (CFO) na Call 2</h4>
+    <p><strong>Moeda:</strong> USD (aproveita operação internacional).<br>
+    <strong>Estrutura:</strong> percentual sobre orçamento de mídia (referência <strong>~10%</strong>) → retainer ~USD 5k/mês como ponto de partida. Range definitivo após análise do funil + escolha de cenário.<br>
+    <strong>Valor proposicional:</strong> não somos vendedor de execução. Somos <em>partner</em> que pensa estratégia, executa e treina o time interno deles pra escalar.</p>
   </div>
 </section>
 
-<!-- ===== SEÇÃO 9 ===== -->
+<!-- ===== 05 ===== -->
 <section>
-  <h2><span class="num">09</span> Objeções que ele vai jogar — e o que responder</h2>
+  <h2><span class="num">05</span> A grande lacuna estratégica deles (= nossa oportunidade)</h2>
+  <p>Eles têm <strong>objetivos sofisticados</strong>, mas a <strong>execução operacional é fraca</strong>. Esse gap é nossa porta de entrada.</p>
 
+  <table>
+    <tr><th>O que eles dizem que querem</th><th>Como está hoje na prática</th></tr>
+    <tr><td>Máquina de aquisição B2B previsível</td><td>~70%+ vem do LinkedIn pessoal do Luiz · 0 ads ativos no Meta · 2 ads pobres + mal segmentados no LinkedIn (mundialmente, sem ICP)</td></tr>
+    <tr><td>Posicionamento "certeza operacional" (oceano azul)</td><td>Site institucional ainda comunica "intelligent hub" (commodity-flavor)</td></tr>
+    <tr><td>5-10 contratos enterprise em 90 dias</td><td>Histórico ~13/ano (meta é 3x histórico — <strong>matemática não fecha</strong>)</td></tr>
+    <tr><td>Tracking server-side + CAPI</td><td>Não tem pixel maturado, sem CAPI em produção</td></tr>
+    <tr><td>Lead magnet distribuído em paid</td><td>"LatAm iGaming Playbook" pronto, só rodando orgânico (e ainda difícil de achar — gap descoberto na call)</td></tr>
+    <tr><td>Funil B2B internacional</td><td>CTA principal é Telegram (nativo iGaming, OK) + email (correto pra B2B internacional) — mas sem nurture sequence, sem segmentação por persona</td></tr>
+  </table>
+
+  <div class="callout">
+    <strong>Insight cardinal.</strong> O ciborgue interno (Gabriel) montou um briefing técnico impressionante <em>na superfície</em>, mas no 2º filtro crítico os números não batem (KPI 3x histórico, sem benchmark realista). Isso confirma que o gap deles é exatamente <strong>análise crítica + execução operacional rigorosa</strong>. É o que GL7 entrega.
+  </div>
+</section>
+
+<!-- ===== 06 ===== -->
+<section>
+  <h2><span class="num">06</span> Estratégia de canais (decisão call)</h2>
+  <table>
+    <tr><th>Canal</th><th>Posição no funil</th><th>Por quê</th></tr>
+    <tr><td><strong>LinkedIn</strong></td><td>Fundo (conversão)</td><td>ABM em operadores enterprise, Thought Leader Ad amplificando o Luiz, Document Ad portando lead magnet, Conversation Ad pra MQL frio</td></tr>
+    <tr><td><strong>Google Ads</strong></td><td>Fundo (conversão)</td><td>Search intent alto (affiliate network · igaming media · sponsorship LATAM · sports sponsorship World Cup 2026), display em portais nicho (iGB, SBC, Yogonet), brand defense</td></tr>
+    <tr><td><strong>Instagram (Meta)</strong></td><td>Topo (awareness)</td><td>Reels UGC founder, B-roll creators, lookalikes do CRM, retarget visual de quem engajou LinkedIn, Lead Ads form nativo via CAPI</td></tr>
+    <tr><td>Telegram</td><td>Dark/nicho (TOFU pontual)</td><td>Nativo iGaming, mas <strong>desce de prioridade vs versão anterior</strong> — fica como reforço, não pilar</td></tr>
+  </table>
+</section>
+
+<!-- ===== 07 ===== -->
+<section>
+  <h2><span class="num">07</span> ICP em paralelo (não sequencial)</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <h4>Persona A · Affiliate Manager</h4>
+      <p><strong>Compra:</strong> performance previsível. <strong>Foco:</strong> FTD, CAC, ROAS. <strong>Decisor:</strong> racional. <strong>Mensagem:</strong> dashboard + número + redução de risco operacional. <strong>Onde está:</strong> LinkedIn + Telegram + eventos SBC/SiGMA.</p>
+    </div>
+    <div class="pillar">
+      <h4>Persona B · Head of Sponsorship</h4>
+      <p><strong>Compra:</strong> brand equity. <strong>Foco:</strong> prestígio, narrativa, audiência qualificada. <strong>Decisor:</strong> estratégico. <strong>Mensagem:</strong> caso de marca + voz do founder + reputação setorial. <strong>Onde está:</strong> LinkedIn + eventos + imprensa especializada.</p>
+    </div>
+  </div>
+  <div class="card info">
+    <p><strong>Por que paralelo:</strong> orçamento USD 50k/mês comporta os dois tracks. <strong>A/B testing valida</strong> qual escala mais rápido nos primeiros 30 dias. Eixos criativos paralelos, LPs bifurcadas, follow-up sequencial por perfil. <strong>One Message vai falhar com uma das duas.</strong></p>
+  </div>
+</section>
+
+<!-- ===== 08 ===== -->
+<section>
+  <h2><span class="num">08</span> Cases que podemos usar como prova B2B Enterprise</h2>
+  <div class="card accent">
+    <h4>Sem violar NDA</h4>
+    <ul>
+      <li><strong>Saving (Caio)</strong> — parceria white-label desde 2025. <strong>Caio liberou citação</strong>. Conexão direta com o Matielli (referrer do Luiz). Forte sinal de relacionamento.</li>
+      <li><strong>Wärtsilä (cliente Saving operado pela GL7)</strong> — B2B Enterprise industrial (mercado de petróleo + aviação). <strong>Sem citar nome direto</strong>: "atendemos uma marca enterprise B2B do setor industrial/aviação". Engajamento e ciclo longo igual ao deles.</li>
+      <li><strong>RIO Galeão Cargo (cliente Saving operado pela GL7)</strong> — B2B Enterprise aviação. <strong>Sem citar nome direto</strong>: mesmo formato anterior.</li>
+      <li><strong>Itá Fogo</strong> — cliente direto GL7 B2B (engenharia contra incêndio). Pode citar.</li>
+      <li><strong>Grupo Olivers</strong> — food enterprise multi-unidade. Pode citar.</li>
+    </ul>
+    <p><strong>NDA Smart Social cobre campanha específica, não brand-mention</strong> (descoberto na call). Eles podem citar 1xBet/Stake institucionalmente, mas não usar logos em criativos pagos.</p>
+  </div>
+</section>
+
+<!-- ===== 09 ===== -->
+<section>
+  <h2><span class="num">09</span> O KPI a desafiar (estratégia da call)</h2>
+  <div class="callout danger">
+    <strong>Meta declarada:</strong> 5-10 contratos enterprise fechados em 90 dias.<br>
+    <strong>Realidade histórica deles:</strong> ~13 contratos/ano. A meta é <strong>3x o histórico em 1/4 do tempo</strong>. Matematicamente irrealista sem GL7 ser comercial deles.<br>
+    <strong>Argumento GL7:</strong> "Se vocês querem que a gente se comprometa com venda fechada, então estamos roubando a venda do seu time. Não é nosso papel. Vamos cravar <em>SQL qualificado</em> como KPI de sucesso da nossa operação — vocês cravam venda fechada como KPI do comercial de vocês."
+  </div>
+  <p><strong>Resposta esperada:</strong> os caras vão recuar. Eles mesmos colocaram o KPI sem benchmark realista. Mostrar essa análise crítica é EXATAMENTE o tipo de pensamento que eles dizem que querem contratar.</p>
+</section>
+
+<!-- ===== 10 ===== -->
+<section>
+  <h2><span class="num">10</span> Pitch central · "Inevitabilidade da certeza operacional"</h2>
+  <blockquote>
+    <strong>Celso:</strong> "Vocês escreveram no briefing que querem ser <em>a empresa que as marcas enterprise contratam quando não querem mais ter problema operacional</em>. Esse posicionamento é forte — só que hoje vocês comunicam ele apenas internamente. Externamente ainda parecem 'hub de influência'. Nossa entrega é fazer essa percepção atravessar até a cadeira do tomador de decisão: cada peça paga, cada landing, cada follow-up vira tijolinho de <strong>certainty operacional</strong>. Não é gerar volume de leads. É reduzir hesitação no momento da compra."
+  </blockquote>
+  <blockquote>
+    "A janela é Copa 2026 nos EUA, Canadá e México. Patrocinador enterprise hoje, com 13 meses pra ativação, é quem fecha primeiro. Vocês têm tudo: rede de creators, sponsorship vivo, 35+ clientes iGaming, 62k FTDs públicos em 2024, founder com autoridade SBC. O que falta é arquitetura que junte isso em máquina."
+  </blockquote>
+</section>
+
+<!-- ===== 11 ===== -->
+<section>
+  <h2><span class="num">11</span> Objeções esperadas + respostas</h2>
   <table>
     <tr><th style="width:38%">Objeção</th><th>Resposta</th></tr>
     <tr>
-      <td><strong>"Já tenho o ciborgue interno, pra que GL7?"</strong></td>
-      <td>"Perfeito — a gente entrega cérebro, ele entrega braço. Não competimos. O trabalho dele fica melhor com a tese estruturada. Se eu quisesse vender execução, eu não estaria aqui."</td>
+      <td><strong>"Já tenho o Gabriel/ciborgue interno"</strong></td>
+      <td>"Perfeito — ele é parte do plano. Vamos entregar consultoria (cérebro + execução) + um Setup formal de treinamento e handoff pra ele. Ele continua operando depois dos 90 dias, mas com playbook estruturado em vez de improviso. Não competimos — multiplicamos."</td>
     </tr>
     <tr>
       <td><strong>"Outra agência cobra metade"</strong></td>
-      <td>"Outras vendem execução. A gente vende pensamento estratégico aplicado ao seu caso. A pergunta não é 'qual cobra menos', é 'qual te dá tese que sustenta seu budget de mídia sem queimar'."</td>
+      <td>"Outras vendem execução de tráfego. A gente vende pensamento estratégico aplicado ao seu caso, com framework B2B enterprise validado em outros verticais regulados. A pergunta não é 'qual cobra menos', é 'qual te dá tese que sustenta USD 50k/mês de mídia sem queimar budget'."</td>
     </tr>
     <tr>
       <td><strong>"Vocês entendem iGaming?"</strong></td>
-      <td>"Honesto: não temos caso BR de iGaming. Temos B2B enterprise regulado validado em outros verticais. O que não sabemos de iGaming hoje, aprendemos com vocês nos primeiros 30 dias — é pra isso que existe o setup. E o que a gente sabe — pensamento B2B enterprise, ciclos longos, decisores sofisticados — é o coração do que vocês precisam."</td>
+      <td>"Honesto: não temos case BR direto de iGaming. Temos B2B enterprise regulado em outros verticais (industrial pesado, aviação, food enterprise, engenharia). O que não sabemos de iGaming hoje aprendemos com vocês nos primeiros 30 dias — é pra isso que existe a Consultoria. O que a gente sabe — pensamento B2B enterprise, ciclos longos, decisores sofisticados — é o coração do que vocês precisam."</td>
     </tr>
     <tr>
-      <td><strong>"Já viram operadores enterprise de perto?"</strong></td>
-      <td>"Não diretamente como cliente nosso. Mas trabalhamos com Caio na Saving que é parceiro de vocês desde 2025, e Itá Fogo / Grupo Olivers são B2B enterprise complexos com ciclos longos. Vamos aprender o vocabulário com vocês — não esperamos que vocês paguem pela nossa curva."</td>
+      <td><strong>"E a meta de 5-10 contratos em 90d?"</strong></td>
+      <td>"Vocês mesmos disseram no briefing que ciclo de venda enterprise é 45-120 dias. Matematicamente, fechar 10 contratos em 90 dias é 3x o histórico de vocês — ~13/ano. Não vamos prometer venda fechada porque seria assumir o papel do comercial de vocês. Cravamos SQL qualificado como nosso KPI. Vocês cravam venda fechada como KPI do time comercial. Sustenta?"</td>
     </tr>
     <tr>
-      <td><strong>"E se eu fizer só o setup?"</strong></td>
-      <td>"Faz sentido, dá pra fechar standalone (Cenário A). Mas a tese precisa de iteração nos primeiros 90 dias. Sem nossa direção, 50% de chance de degradar. Recomendo retainer leve mínimo de 3 meses — não exigimos, mas avisamos."</td>
+      <td><strong>"Por que cobrar em USD?"</strong></td>
+      <td>"Vocês operam internacional, cliente é em USD, mídia é em USD. Faz sentido o fornecedor também ser em USD pra não criar fricção cambial na sua operação. E pra nós, é coerente com o nível de cliente que você é. Pricing é referência de mercado: ~10% sobre o budget de mídia — estrutura padrão B2B enterprise consulting."</td>
     </tr>
     <tr>
-      <td><strong>"Por que não rodar paid direto sem consultoria?"</strong></td>
-      <td>"Porque USD 50k/mês × 3 meses sem tese é risco alto. Tese custa fração disso. Você compra previsibilidade pelo preço de uma semana de mídia."</td>
+      <td><strong>"Por que GL7 e não in-house puro com o Gabriel?"</strong></td>
+      <td>"O Gabriel é executor afiado — viu o briefing dele. Mas executor sem arquitetura externa otimiza o errado. Você quer um Gabriel turbinado por método validado, não um Gabriel improvisando sozinho com USD 50k/mês em risco. A gente vira a arquitetura, ele vira a operação. Junto é mais barato e mais rápido do que cada um fazer separado."</td>
     </tr>
   </table>
 </section>
 
-<!-- ===== SEÇÃO 10 ===== -->
+<!-- ===== 12 ===== -->
 <section>
-  <h2><span class="num">10</span> Insights táticos cardinais</h2>
-
-  <div class="card accent">
-    <h4>Telegram não é detalhe — é nativo da vertical</h4>
-    <p>"Affiliate Managers e operadores iGaming LATAM vivem no Telegram." Nenhuma agência B2B brasileira convencional usa Telegram como CTA. Smart Social usa, por motivo certo. <strong>Nos ads, "vamos pro Telegram conversar" funciona melhor que "agende uma demo".</strong></p>
+  <h2><span class="num">12</span> Roteiro da Call 2 (sexta 29/05 · 15h)</h2>
+  <div class="card">
+    <h4>0-5min · Thiago abre</h4>
+    <p>"Faaala Luiz, prazer de novo. Combinamos quarta passada e o Gabriel pediu pra mudar, beleza? Tem mais alguém entrando? Beleza. A gente fez o dever de casa nesses 2 dias. Vou passar a palavra pro Celso conduzir."</p>
   </div>
-
-  <div class="card accent">
-    <h4>O paradoxo "casa de ferreiro, espeto de pau"</h4>
-    <p>Eles operam paid pros clientes deles via Kwai + programmatic. Mas <strong>não têm máquina B2B própria pra captar novos operadores como clientes.</strong> Esse é o gap. Não confundir os dois lados na conversa.</p>
+  <div class="card">
+    <h4>5-25min · Celso conduz análise + apresenta diagnóstico</h4>
+    <p>Compartilhar tela com <code>github.ghostlab7.com.br/crm-smart-social</code>. Passar pelas 15 seções rápido (não ler tudo). Foco em: (a) leitura do background do Luiz como sinal de respeito, (b) gap analysis site×briefing, (c) reframe certainty operacional, (d) ângulo Copa 2026, (e) 8 desafios decodificados, (f) 4 canais com %.</p>
   </div>
-
-  <div class="card accent">
-    <h4>Persona A vs Persona B — não compartilham campanha</h4>
-    <p><strong>Persona A (Affiliate Manager):</strong> performance previsível, FTD/CAC/ROAS, decisor racional. Mensagem = dashboard + número + redução de risco operacional.<br><br>
-    <strong>Persona B (Head of Sponsorship):</strong> brand equity, prestígio, narrativa, decisor estratégico. Mensagem = caso de marca + voz do founder + reputação setorial.<br><br>
-    One Message vai falhar com uma das duas. Eixos criativos paralelos + landing pages bifurcadas + follow-up sequencial por perfil.</p>
+  <div class="card">
+    <h4>25-40min · Discovery aberto (3 perguntas-mãe)</h4>
+    <p><strong>P1:</strong> "Hoje, dos seus 35+ contratos iGaming, qual o split de origem (LinkedIn founder × eventos × indicação × outbound)? E qual desses canais cresceu mais nos últimos 12 meses?"<br><br>
+    <strong>P2:</strong> "Qual foi o último contrato enterprise que vocês perderam ou demoraram mais que o normal pra fechar — e por quê?"<br><br>
+    <strong>P3:</strong> "Pra Copa 2026 América do Norte, qual desses 3 mercados (EUA · Canadá · México) vocês têm relação comercial mais forte hoje?"</p>
   </div>
-
-  <div class="card accent">
-    <h4>Reframe do job real</h4>
-    <p>Eles pediram "rodar ads pra gerar leads B2B". <strong>Mas o que eles realmente precisam é amplificar <em>certainty operacional</em> via paid coordenado.</strong> Não é gerar volume de leads — é reduzir hesitação na cadeira do tomador de decisão. Cada peça paga vira tijolinho de confiança operacional. Isso muda copy, criativo, landing, follow-up. Muda tudo.</p>
+  <div class="card">
+    <h4>40-50min · Apresentação dos 2 produtos</h4>
+    <p><strong>Thiago:</strong> "Pelo que ouvimos, montamos dois produtos: <strong>Consultoria full-service</strong> (estratégia + execução) e <strong>Setup</strong> (treinamento e handoff pro Gabriel). Pricing em USD, referência 10% sobre mídia. Range definitivo a gente fecha depois de ver o seu lead magnet e validar premissas do funil. Faz sentido essa estrutura?"</p>
+  </div>
+  <div class="card">
+    <h4>50-60min · Desafio do KPI + next steps</h4>
+    <p>Trazer o desafio do "5-10 em 90d" como mostra de pensamento crítico. Não negar, propor reframe pra SQL. Fechar com: NDA + escopo formal por escrito até quarta 03/06, Call 3 (escolha de cenário + Warren no CFO + Luna no Ops) na semana de 03/06.</p>
   </div>
 </section>
 
-<!-- ===== SEÇÃO 11 ===== -->
+<!-- ===== 13 ===== -->
 <section>
-  <h2><span class="num">11</span> 4 checks rápidos antes da call</h2>
-  <div class="check"><input type="checkbox" id="c1"><label for="c1">Thiago aprovou o range comercial dos 3 cenários antes da call?</label></div>
-  <div class="check"><input type="checkbox" id="c2"><label for="c2">Decidido: vamos expor logo Smart Social no portfólio GL7 ou operar sem case público?</label></div>
-  <div class="check"><input type="checkbox" id="c3"><label for="c3">Tem NDA template GL7 pronto? Se não, prometer envio em 24h após call.</label></div>
-  <div class="check"><input type="checkbox" id="c4"><label for="c4">Confirmou com Luiz no WhatsApp quem mais entra na call (Caio Disero? Gabriel?)?</label></div>
+  <h2><span class="num">13</span> Compromissos GL7 pré-Call 2 (2 dias)</h2>
+  <div class="check"><input type="checkbox" id="c1"><label for="c1"><strong>Solicitar Lead Magnet "iGaming Playbook"</strong> pro Luiz no WhatsApp (Thiago) — pra entender o funil deles antes da call</label></div>
+  <div class="check"><input type="checkbox" id="c2"><label for="c2"><strong>Pesquisar regulação iGaming nos EUA, Canadá e México</strong> — quem joga, o que pode e não pode anunciar, qual a janela Copa 2026</label></div>
+  <div class="check"><input type="checkbox" id="c3"><label for="c3"><strong>Auditar lib LinkedIn Ads</strong> dos 2 anúncios mal segmentados que eles rodam — printar e trazer como evidência</label></div>
+  <div class="check"><input type="checkbox" id="c4"><label for="c4"><strong>Calendário GL7 de eventos 2027</strong> organizado por setor (Celso, semana que vem — compromisso explícito)</label></div>
+  <div class="check"><input type="checkbox" id="c5"><label for="c5"><strong>Pesquisar Smart Social no Google Transparency</strong> — confirmar se tem ou não conta Google Ads ativa</label></div>
+  <div class="check"><input type="checkbox" id="c6"><label for="c6"><strong>Validar identidade Gabriel</strong> (LinkedIn dele) — provavelmente Gabriel Olegário (Head of Strategy via RocketReach)</label></div>
 </section>
 
-<!-- ===== SEÇÃO 12 ===== -->
+<!-- ===== 14 ===== -->
 <section>
-  <h2><span class="num">12</span> A regra de ouro da call</h2>
+  <h2><span class="num">14</span> 4 insights operacionais cardinais (não perder de vista)</h2>
+  <div class="card accent">
+    <h4>1 · B2B internacional usa email como canal #1</h4>
+    <p>Não é WhatsApp como no Brasil. Empresa enterprise mundo afora se comunica por email — interna e externa. Nossa estratégia de outbound + nurture precisa ser <strong>email-first</strong>, não WhatsApp. Telegram é o "tempero" iGaming-nativo.</p>
+  </div>
+  <div class="card accent">
+    <h4>2 · Distinção crítica iGaming Brasil</h4>
+    <p>Mercado regulamentado desde 2025: <strong>aposta esportiva = OK anunciar / cassino online = NÃO</strong>. Creative angle precisa respeitar essa fronteira (não a nossa, é deles enquanto operadores) pra não queimar conta de mídia.</p>
+  </div>
+  <div class="card accent">
+    <h4>3 · Paradoxo "casa de ferreiro, espeto de pau"</h4>
+    <p>Eles operam paid pros clientes deles (via Kwai + programmatic) mas não têm máquina B2B própria pra captar novos operadores. Não confundir os dois lados na conversa.</p>
+  </div>
+  <div class="card accent">
+    <h4>4 · Reframe do job real</h4>
+    <p>Eles pediram "rodar ads pra gerar leads B2B". <strong>Mas o que realmente precisam é amplificar <em>certainty operacional</em> via paid coordenado.</strong> Não é volume — é reduzir hesitação na cadeira do tomador. Cada peça paga vira tijolinho de confiança operacional. Isso muda copy, criativo, landing, follow-up.</p>
+  </div>
+</section>
 
+<!-- ===== 15 ===== -->
+<section>
+  <h2><span class="num">15</span> Regra de ouro da Call 2</h2>
+  <div class="callout">
+    <strong>O diagnóstico Thiago em github.ghostlab7.com.br/crm-smart-social VAI ser apresentado.</strong> Já decidido. Não esconder. Mas <strong>fechamento de valor definitivo é Call 3</strong> (com Warren no CFO e Luna no Ops). Call 2 = mostrar leitura GL7, abrir 15 perguntas estruturadas, validar cenário comercial, NDA + escopo formalizado depois.
+  </div>
   <div class="callout danger">
-    <strong>Não tente fechar na Call 1.</strong> Discovery puro. Apresentar como lemos o briefing (diagnóstico já está público no link), abrir as 15 perguntas que o Thiago estruturou no diagnóstico, escutar muito. Fechamento de escopo + valores é Call 2 (semana seguinte, com Warren no CFO e Luna no Ops).
+    <strong>Se ele puxar pelo número final hoje:</strong> "USD 5k/mês é referência de mercado (10% mídia), mas o número exato depende do escopo escolhido — Consultoria full vs Setup standalone, prazo, número de canais. Na Call 3 a gente volta com Warren trazendo unit economics validados contra o seu CRM real. Por enquanto, faz sentido a referência?"
   </div>
-
-  <p>Se o Luiz puxar pelo preço hoje, defesa: "Cara, primeiro quero entender melhor o seu caso pra calibrar. Não vou cuspir valor sem ter certeza do escopo. Na Call 2 a gente volta com proposta detalhada por cenário."</p>
-</section>
-
-<!-- ===== SEÇÃO 13 ===== -->
-<section>
-  <h2><span class="num">13</span> Como o Thiago fecha a call</h2>
-  <blockquote>
-    "Nos próximos 5-7 dias úteis a gente faz lição de casa — deep dive nas 2 personas, audit das landings atuais, mapa competitivo iGaming LATAM detalhado, draft de creative concepts piloto e draft de escopo+investimento por cenário. Na Call 2 (semana que vem), a gente apresenta proposta detalhada com Warren (CFO) trazendo unit economics validados e Luna (Ops) na orquestração de automações. Você escolhe Cenário A, B ou C. Fechado?"
-  </blockquote>
 </section>
 
 <footer>
-  Ghost Lab7 · Briefing interno · Atualizado 2026-05-27<br>
-  Não indexado · Não compartilhar com o lead · Material operacional pra Call 1
+  Ghost Lab7 · Briefing interno v2 · Atualizado 2026-05-27 pós-call de alinhamento Thiago+Celso<br>
+  Não indexado · Não compartilhar com o lead · Companion ao diagnóstico público<br>
+  Call 2: sexta 2026-05-29 · 15h · Thiago + Celso × Luiz Felippe Correia + Gabriel
 </footer>
 
 </div>
