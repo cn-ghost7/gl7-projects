@@ -1,0 +1,247 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OLV Lapa — Projeção de Performance · Julho 2026</title><meta name="robots" content="noindex"><meta name="description" content="Projeção de performance Meta Ads — Oliver's Pizza Lapa, Julho 2026"></head><body>
+<style>
+  :root{
+    --paper:#FBF8F4; --surface:#FFFFFF; --ink:#241C1A; --muted:#6E625C; --faint:#9A8D86;
+    --line:#EBE3D8; --line2:#F3EDE4;
+    --tomato:#C63A2F; --tomato-d:#A32C23; --blue:#1F6FB2; --amber:#C6851E; --violet:#6B4E9E;
+    --good:#2F7D4F; --good-bg:#EAF3EC;
+    --shadow:0 1px 2px rgba(50,30,20,.05), 0 6px 20px rgba(50,30,20,.05);
+  }
+  *{box-sizing:border-box}
+  .wrap{
+    max-width:1000px; margin:0 auto; padding:38px 26px 60px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5;
+  }
+  .wrap :is(h1,h2,h3){text-wrap:balance; margin:0}
+  .num{font-variant-numeric:tabular-nums; font-feature-settings:"tnum"}
+  .eyebrow{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:var(--tomato); font-size:.9rem; letter-spacing:.01em}
+  .label{text-transform:uppercase; letter-spacing:.09em; font-size:.68rem; font-weight:700; color:var(--faint)}
+
+  /* header */
+  header{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; padding-bottom:20px; border-bottom:2px solid var(--ink); flex-wrap:wrap}
+  .brand{font-family:Georgia,serif; font-weight:700; font-size:1.05rem; letter-spacing:.02em; display:flex; align-items:center; gap:9px}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--tomato);box-shadow:0 0 0 3px rgba(198,58,47,.16)}
+  header h1{font-family:Georgia,serif; font-size:2rem; font-weight:700; line-height:1.05; margin-top:6px}
+  header .sub{color:var(--muted); font-size:.92rem; margin-top:4px}
+  .budget-badge{text-align:right}
+  .budget-badge .cut{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:1.02rem}
+  .budget-badge .old{color:var(--faint); text-decoration:line-through; font-weight:600}
+  .budget-badge .arrow{color:var(--tomato)}
+  .budget-badge .new{color:var(--ink); font-size:1.5rem; font-family:Georgia,serif}
+  .budget-badge small{display:block; color:var(--faint); font-size:.66rem; text-transform:uppercase; letter-spacing:.08em; margin-top:3px}
+
+  section{margin-top:34px}
+  .sec-head{display:flex; align-items:baseline; gap:12px; margin-bottom:16px}
+  .sec-head h2{font-size:1.15rem; font-weight:700}
+  .sec-head .n{font-family:Georgia,serif; color:var(--tomato); font-weight:700; font-size:1.05rem}
+  p.lead{color:var(--muted); max-width:64ch; margin:0 0 4px}
+
+  /* hero stat row */
+  .hero{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:14px; margin-top:24px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px 20px; box-shadow:var(--shadow)}
+  .stat .big{font-family:Georgia,serif; font-weight:700; font-size:2.1rem; line-height:1; letter-spacing:-.01em}
+  .stat .rng{font-size:1.05rem; font-weight:700; color:var(--muted)}
+  .stat .cap{margin-top:8px; color:var(--muted); font-size:.85rem}
+  .stat.accent{background:linear-gradient(160deg,#fff, #FCF1EF); border-color:#F0CDC8}
+  .stat.accent .big{color:var(--tomato-d)}
+  .pill{display:inline-block; padding:2px 9px; border-radius:999px; font-size:.72rem; font-weight:700}
+  .pill.good{background:var(--good-bg); color:var(--good)}
+
+  /* scenario cards */
+  .scen{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow); position:relative}
+  .card.best{border-color:var(--tomato); box-shadow:0 0 0 1px var(--tomato), var(--shadow)}
+  .card .tag{position:absolute; top:-10px; left:16px; background:var(--tomato); color:#fff; font-size:.64rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:3px 9px; border-radius:999px}
+  .card h3{font-size:.98rem; font-weight:700; margin-bottom:2px}
+  .card .prem{color:var(--faint); font-size:.78rem; margin-bottom:14px}
+  .kv{display:flex; justify-content:space-between; align-items:baseline; padding:7px 0; border-top:1px solid var(--line2)}
+  .kv:first-of-type{border-top:none}
+  .kv .k{color:var(--muted); font-size:.82rem}
+  .kv .v{font-weight:700; font-size:1.02rem}
+  .kv .v.hl{font-family:Georgia,serif; font-size:1.35rem; color:var(--ink)}
+  .kv .roas{color:var(--good)}
+
+  /* generic chart */
+  .chart{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px; box-shadow:var(--shadow)}
+  .bars{display:flex; flex-direction:column; gap:14px; margin-top:6px}
+  .barrow{display:grid; grid-template-columns:120px 1fr; align-items:center; gap:14px}
+  .barrow .nm{font-size:.86rem; font-weight:600}
+  .barrow .nm small{display:block; color:var(--faint); font-weight:600; font-size:.72rem}
+  .track{position:relative; height:26px; background:var(--line2); border-radius:5px; overflow:hidden}
+  .fill{position:absolute; inset:0 auto 0 0; border-radius:5px; display:flex; align-items:center; justify-content:flex-end; padding-right:9px}
+  .fill span{color:#fff; font-weight:700; font-size:.8rem; font-variant-numeric:tabular-nums}
+  .fill.out span{color:var(--ink)}
+  .fill.out{justify-content:flex-start; padding-left:calc(100% + 9px); overflow:visible; white-space:nowrap}
+
+  /* levers */
+  .levers{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .lever{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:12px; padding:16px 18px; box-shadow:var(--shadow)}
+  .lever.warm{border-left-color:var(--violet)} .lever.focus{border-left-color:var(--tomato)}
+  .lever .impact{font-family:Georgia,serif; font-weight:700; font-size:1.3rem; color:var(--good)}
+  .lever h4{margin:2px 0 6px; font-size:.92rem}
+  .lever p{margin:0; color:var(--muted); font-size:.82rem}
+
+  /* june base */
+  .tiles{display:grid; grid-template-columns:repeat(5,1fr); gap:12px}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px}
+  .tile .v{font-family:Georgia,serif; font-weight:700; font-size:1.45rem}
+  .tile .k{color:var(--muted); font-size:.75rem; margin-top:2px}
+
+  .callout{background:#FCF1EF; border:1px solid #F0CDC8; border-radius:12px; padding:16px 20px; display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:center}
+  .callout .big{font-family:Georgia,serif; font-weight:700; font-size:1.7rem; color:var(--tomato-d); white-space:nowrap}
+  .callout p{margin:0; color:var(--muted); font-size:.86rem}
+  .callout p b{color:var(--ink)}
+
+  footer{margin-top:38px; padding-top:16px; border-top:1px solid var(--line); color:var(--faint); font-size:.76rem; line-height:1.6}
+  footer b{color:var(--muted)}
+
+  @media(max-width:720px){
+    .hero,.scen,.levers{grid-template-columns:1fr}
+    .tiles{grid-template-columns:repeat(2,1fr)}
+    .barrow{grid-template-columns:96px 1fr}
+    header h1{font-size:1.6rem}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand"><span class="dot"></span> Oliver's Pizza · Unidade Lapa</div>
+      <h1>Projeção de Performance</h1>
+      <div class="sub">Julho 2026 · 2º mês de operação · Meta Ads (delivery)</div>
+    </div>
+    <div class="budget-badge">
+      <div class="cut"><span class="old num">R$ 7.000</span><span class="arrow">→</span><span class="new num">R$ 5.000</span></div>
+      <small>Budget do mês (novo)</small>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="stat accent">
+      <div class="label">Faturamento projetado</div>
+      <div class="big num">R$ 29,5 mil</div>
+      <div class="cap">cenário realista · faixa <b class="num">R$ 25,7k–33,6k</b></div>
+    </div>
+    <div class="stat">
+      <div class="label">ROAS projetado</div>
+      <div class="big num">5,9<span style="font-size:1.1rem;color:var(--muted)">×</span></div>
+      <div class="cap"><span class="pill good">mantém junho (5,8)</span></div>
+    </div>
+    <div class="stat">
+      <div class="label">Pedidos / mês</div>
+      <div class="big num">~268</div>
+      <div class="cap">delivery · ticket médio <b class="num">R$ 109</b></div>
+    </div>
+  </div>
+  <p class="lead" style="margin-top:14px">Com <b>R$ 2 mil a menos</b>, a conta mantém o retorno cortando o que não vende e concentrando 100% no delivery. Menos gordura, mais músculo — o investimento vira pedido.</p>
+
+  <!-- SCENARIOS -->
+  <section>
+    <div class="sec-head"><span class="n">01</span><h2>Três cenários para os R$ 5.000</h2></div>
+    <div class="scen">
+      <div class="card">
+        <h3>Conservador</h3><div class="prem">sem refresh de criativo · fadiga</div>
+        <div class="kv"><span class="k">Faturamento</span><span class="v hl num">R$ 25,7k</span></div>
+        <div class="kv"><span class="k">Pedidos</span><span class="v num">233</span></div>
+        <div class="kv"><span class="k">ROAS</span><span class="v roas num">5,1×</span></div>
+      </div>
+      <div class="card best">
+        <span class="tag">Realista</span>
+        <h3>Realista</h3><div class="prem">CPA na média de junho</div>
+        <div class="kv"><span class="k">Faturamento</span><span class="v hl num">R$ 29,5k</span></div>
+        <div class="kv"><span class="k">Pedidos</span><span class="v num">268</span></div>
+        <div class="kv"><span class="k">ROAS</span><span class="v roas num">5,9×</span></div>
+      </div>
+      <div class="card">
+        <h3>Otimista</h3><div class="prem">refresh de criativo + retarget</div>
+        <div class="kv"><span class="k">Faturamento</span><span class="v hl num">R$ 33,6k</span></div>
+        <div class="kv"><span class="k">Pedidos</span><span class="v num">305</span></div>
+        <div class="kv"><span class="k">ROAS</span><span class="v roas num">6,7×</span></div>
+      </div>
+    </div>
+    <div class="chart" style="margin-top:14px">
+      <div class="label" style="margin-bottom:14px">Faturamento projetado por cenário</div>
+      <div class="bars">
+        <div class="barrow"><div class="nm">Conservador</div>
+          <div class="track"><div class="fill" style="width:76.5%;background:#B9A59B"><span>R$ 25,7k</span></div></div></div>
+        <div class="barrow"><div class="nm">Realista <small>recomendado</small></div>
+          <div class="track"><div class="fill" style="width:88%;background:var(--tomato)"><span>R$ 29,5k</span></div></div></div>
+        <div class="barrow"><div class="nm">Otimista</div>
+          <div class="track"><div class="fill" style="width:100%;background:var(--good)"><span>R$ 33,6k</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALLOCATION -->
+  <section>
+    <div class="sec-head"><span class="n">02</span><h2>Como os R$ 5.000 trabalham</h2></div>
+    <p class="lead">Alocação bottom-up, campanha por campanha, com o CPA real de junho. O foco vai para as campeãs de venda e para a nova camada de retargeting.</p>
+    <div class="chart">
+      <div class="bars">
+        <div class="barrow"><div class="nm" style="color:var(--tomato)">Cortador <small>conversão · campeã de volume</small></div>
+          <div class="track"><div class="fill" style="width:39%;background:var(--tomato)"><span>R$ 1.950 · 39%</span></div></div></div>
+        <div class="barrow"><div class="nm" style="color:var(--blue)">Cold <small>prospecção fria</small></div>
+          <div class="track"><div class="fill" style="width:34%;background:var(--blue)"><span>R$ 1.700 · 34%</span></div></div></div>
+        <div class="barrow"><div class="nm" style="color:var(--amber)">Warm (retarget) <small>viu cardápio / carrinho</small></div>
+          <div class="track"><div class="fill" style="width:18%;background:var(--amber)"><span>R$ 900 · 18%</span></div></div></div>
+        <div class="barrow"><div class="nm" style="color:var(--violet)">Topo <small>marca · popula públicos</small></div>
+          <div class="track"><div class="fill out" style="width:9%;background:var(--violet)"><span>R$ 450 · 9%</span></div></div></div>
+      </div>
+      <p style="margin:16px 0 0;color:var(--muted);font-size:.82rem">Captação de Leads <b>pausada</b> — meta de 1.000 leads já superada. A verba migra integralmente para venda.</p>
+    </div>
+  </section>
+
+  <!-- LEVERS -->
+  <section>
+    <div class="sec-head"><span class="n">03</span><h2>As 3 alavancas que definem o resultado</h2></div>
+    <div class="levers">
+      <div class="lever warm">
+        <div class="impact num">+R$ 7,5k</div>
+        <h4>Ativar o retargeting real</h4>
+        <p>Público de quem viu o cardápio e adicionou ao carrinho — uma camada de alta intenção que estava desligada. ~60 pedidos/mês novos.</p>
+      </div>
+      <div class="lever">
+        <div class="impact num">+R$ 4,0k</div>
+        <h4>Refresh de criativo</h4>
+        <p>As campeãs já rodam com frequência alta (o público está vendo o mesmo anúncio demais). Criativo novo derruba o custo por pedido — é o que leva do realista ao otimista.</p>
+      </div>
+      <div class="lever focus">
+        <div class="impact num">ROAS ~6</div>
+        <h4>Foco total em venda</h4>
+        <p>Pausar Leads + topo enxuto concentra o investimento onde ele vira pedido. É isso que segura o retorno mesmo com R$ 2 mil a menos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUNE BASE -->
+  <section>
+    <div class="sec-head"><span class="n">04</span><h2>A base é real — Junho 2026</h2></div>
+    <p class="lead">A projeção não é estimativa solta: parte de um mês inteiro de operação, com número que bate com o Ads Manager.</p>
+    <div class="tiles">
+      <div class="tile"><div class="v num">R$ 4.453</div><div class="k">Investido</div></div>
+      <div class="tile"><div class="v num">237</div><div class="k">Pedidos</div></div>
+      <div class="tile"><div class="v num">R$ 25,9k</div><div class="k">Faturamento</div></div>
+      <div class="tile"><div class="v num" style="color:var(--good)">5,82×</div><div class="k">ROAS</div></div>
+      <div class="tile"><div class="v num">R$ 109</div><div class="k">Ticket médio</div></div>
+    </div>
+  </section>
+
+  <!-- TRADE-OFF -->
+  <section>
+    <div class="sec-head"><span class="n">05</span><h2>O que o corte de budget custa</h2></div>
+    <div class="callout">
+      <div class="big num">−R$ 12k / mês</div>
+      <p>Transparência: com R$ 7 mil o teto de faturamento seria ~R$ 41k; com R$ 5 mil, ~R$ 29k. O corte <b>não afeta a eficiência (ROAS ~6 mantido)</b>, mas <b>limita o volume</b> de pedidos que poderíamos capturar. Se o budget voltar, a conta escala com o mesmo retorno.</p>
+    </div>
+  </section>
+
+  <footer>
+    <b>Premissas:</b> base = Junho/2026 real (Meta Ads, evento de compra canônico). Ticket médio R$ 109. CPA de delivery R$ 15–19 por campanha. Cenários variam pelo custo por pedido (fadiga vs. refresh de criativo). Vendas = pixel canônico (batem com o Ads Manager); leads não entram (campanha pausada). Julho reinicia após pausa na virada do mês — a média mensal absorve os dias de reaprendizado.<br>
+    <b>Recomendação:</b> aprovar refresh de criativo das campeãs + manter o retargeting ativo → cenário realista/otimista (R$ 29–34k, ROAS 5,9–6,7) plausível mesmo com o budget reduzido.<br><br>
+    Ghost Lab7 · Performance · Oliver's Pizza Lapa · Julho 2026
+  </footer>
+</div>
+</body></html>
