@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Smart Social — Gestão de Criativos · GL7 · Jul26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1117; --bg-card:#161922; --bg-card-2:#1c2030;
+    --border:#252938; --border-soft:#1d2030;
+    --ink:#e8ebf5; --ink-soft:#a8aec0; --ink-muted:#6b7185;
+    --accent:#f2a900; --accent-soft:#8a6410; --accent-bg:rgba(242,169,0,.10);
+    --good:#9ce8a3; --warn:#f4c97b; --info:#7dd3fc;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65;
+    color:var(--ink);background:var(--bg);font-size:15.5px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:44px 24px 96px}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:clamp(1.9rem,5vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:.3em 0 .25em;text-wrap:balance}
+  .lede{color:var(--ink-soft);font-size:1.05rem;max-width:62ch}
+  .rule{height:2px;background:linear-gradient(90deg,var(--accent),transparent);margin:26px 0 8px;border-radius:2px}
+  h2{font-size:1.35rem;font-weight:750;letter-spacing:-.01em;margin:2.4em 0 .1em;display:flex;align-items:center;gap:.5em}
+  h2 .n{font-family:var(--mono);font-size:.82rem;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-soft);padding:2px 9px;border-radius:7px}
+  h3{font-size:1.02rem;font-weight:650;margin:1.5em 0 .3em;color:var(--ink)}
+  p{margin:.5em 0;color:var(--ink-soft)}
+  strong{color:var(--ink);font-weight:600}
+  ul{margin:.4em 0 .4em 0;padding-left:0;list-style:none}
+  li{position:relative;padding-left:20px;margin:.3em 0;color:var(--ink-soft)}
+  li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:.82rem;margin:14px 0 4px}
+  .flow span{background:var(--bg-card);border:1px solid var(--border);padding:7px 13px;border-radius:8px;color:var(--ink)}
+  .flow .arw{color:var(--accent);padding:0 2px}
+  .card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
+  .ex{background:var(--bg-card-2);border:1px solid var(--border-soft);border-left:3px solid var(--accent);border-radius:10px;padding:14px 16px;margin:12px 0}
+  .ex .t{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+  .ex .row{display:grid;grid-template-columns:130px 1fr;gap:4px 12px;font-size:.92rem}
+  .ex .k{color:var(--ink-muted);font-size:.86rem}
+  .ex .v{color:var(--ink)}
+  .ex em{color:var(--good);font-style:italic}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+  .tag{font-family:var(--mono);font-size:.72rem;padding:4px 10px;border-radius:20px;border:1px solid var(--border);color:var(--ink-soft);background:var(--bg-card)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border)}
+  th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);font-weight:500}
+  td strong{color:var(--ink)}
+  .callout{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:.94rem}
+  .callout.warn{background:rgba(244,201,123,.07);border-color:var(--warn)}
+  .callout.info{background:rgba(125,211,252,.07);border-color:var(--info)}
+  .callout b{color:var(--ink)}
+  .rsa{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:12px 0}
+  .rsa h4{font-size:.98rem;margin:0 0 4px;color:var(--ink)}
+  .rsa .persona{font-family:var(--mono);font-size:.72rem;color:var(--ink-muted);margin-bottom:8px}
+  .rsa .cta{font-family:var(--mono);font-size:.8rem;color:var(--accent);margin-top:8px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--border);font-family:var(--mono);font-size:.74rem;color:var(--ink-muted);display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Smart Social · Performance GL7</span>
+  <h1>Gestão de Criativos</h1>
+  <p class="lede">Campanhas e públicos já montados no LinkedIn e no Google (pausados). Falta o criativo pra ir ao ar. Este é o brief por canal — formato, volume e ângulo — pra Carol (copy) e Caio (design).</p>
+  <div class="rule"></div>
+
+  <div class="flow">
+    <span>Ghost · brief</span><span class="arw">→</span>
+    <span>Carol · copy</span><span class="arw">→</span>
+    <span>Caio · design</span><span class="arw">→</span>
+    <span>Ghost · sobe</span>
+  </div>
+
+  <h2><span class="n">01</span> Regras de ouro</h2>
+  <div class="card">
+    <ul>
+      <li><strong>CTA sempre → LP com formulário.</strong> Capturamos o lead (nome/e-mail/telefone) e roteamos pro Telegram. Nunca direto pro chat.</li>
+      <li><strong>Global sempre:</strong> mapa-múndi / big numbers — 1000+ creators · 62k+ FTDs verificados · 25+ países · 35+ clientes.</li>
+      <li><strong>Resultado, não alcance:</strong> FTD / ROI / depósito. Régua: <em>"Proof, not reach"</em>.</li>
+      <li><strong>EN-first · premium (anti-IA) · padrão Brandbook</strong> (brand.smtsocial.com.br).</li>
+      <li><strong>Logo de cliente:</strong> só com aval do Luiz/Cabral.</li>
+      <li>Refs do Drive = <strong>benchmark do passado</strong>. Evoluir, não repetir.</li>
+    </ul>
+  </div>
+
+  <h2><span class="n">02</span> LinkedIn · motor (55%)</h2>
+  <div class="callout warn"><b>⚡ 1 formato por conjunto</b> (diferente do Meta). Estático, carrossel e vídeo = conjuntos separados. Começamos por <b>estático + carrossel</b>; vídeo entra em seguida.</div>
+
+  <h3>Topo / Autoridade — LI 01 (ICP, 59k) + LI 01b (NDA, ~1,5k)</h3>
+  <p>Estático <strong>3 variações</strong> + Carrossel <strong>3 variações</strong>.</p>
+  <div class="ex">
+    <div class="t">Exemplo · Estático</div>
+    <div class="row">
+      <div class="k">Visual</div><div class="v">mapa-múndi + <em>"62,000+ Verified FTDs"</em> em destaque · paleta escura premium</div>
+      <div class="k">Texto</div><div class="v"><em>"We deliver deposits — measured across 25+ countries."</em></div>
+      <div class="k">Frase na arte</div><div class="v"><em>"Proof, not reach."</em></div>
+      <div class="k">CTA</div><div class="v">Learn more → LP</div>
+    </div>
+  </div>
+  <div class="ex">
+    <div class="t">Exemplo · Carrossel (5 cards)</div>
+    <div class="row">
+      <div class="k">Card 1 (capa)</div><div class="v"><em>"3 reasons operators trust Smart Social"</em></div>
+      <div class="k">Card 2</div><div class="v"><em>"1000+ creators, 25+ countries"</em></div>
+      <div class="k">Card 3</div><div class="v"><em>"62,000+ FTDs verified in 2024"</em></div>
+      <div class="k">Card 4</div><div class="v"><em>"One number: deposits"</em></div>
+      <div class="k">Card 5 (CTA)</div><div class="v"><em>"Request your strategic plan"</em></div>
+    </div>
+  </div>
+
+  <h3>Vídeo — Hero Video</h3>
+  <p>Entra como conjunto próprio no topo assim que ficar pronto. <strong>Conceito e roteiro ficam com o time do cliente</strong> — a Ghost só define formato e posição no funil. Maior mão de obra, por isso vem logo após estático/carrossel (não trava o go-live).</p>
+
+  <h3>Lead / Playbook — LI 02 (morno)</h3>
+  <p>Estático <strong>3 variações</strong>, oferta do Playbook.</p>
+  <div class="ex">
+    <div class="t">Exemplo · Lead</div>
+    <div class="row">
+      <div class="k">Texto</div><div class="v"><em>"The LatAm iGaming Playbook — how top operators diversify."</em></div>
+      <div class="k">Frase na arte</div><div class="v"><em>"Free Playbook. Real data."</em></div>
+      <div class="k">CTA</div><div class="v">Download → página do Playbook (com form)</div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag">Single Image 1200×627 / 1080×1080</span>
+    <span class="tag">Carrossel 1080×1080 · 4–5 cards</span>
+    <span class="tag">Vídeo vertical/quadrado</span>
+    <span class="tag">texto ≤ 150 car</span>
+  </div>
+
+  <h2><span class="n">03</span> Google · intenção (25%)</h2>
+  <div class="callout info"><b>🔀 Divisão de produção:</b> o cliente produz <b>só o criativo do Display</b>. O texto das buscas (Search/RSA) é a <b>Ghost</b> que faz — vocês só dão o check.</div>
+
+  <h3>Display (remarketing) — Caio produz</h3>
+  <p>Responsive Display. Conceitos da Carol: <em>Proof, Not Reach</em> · <em>Enter New Markets</em> · <em>Channel Mix Ready?</em>.</p>
+  <div class="ex">
+    <div class="t">Exemplo · Display</div>
+    <div class="row">
+      <div class="k">Headline</div><div class="v"><em>"62,000+ Verified FTDs across 25+ Countries"</em></div>
+      <div class="k">CTA</div><div class="v">Request Demo</div>
+      <div class="k">Regra</div><div class="v">texto ≤ 20% da área da imagem</div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">1200×628</span><span class="tag">1200×1200</span><span class="tag">logo 1:1 e 4:1</span></div>
+
+  <h3>Search (RSA) — Ghost produz · vocês só validam</h3>
+  <div class="rsa">
+    <h4>A · Cut CAC / FTD Attribution</h4>
+    <div class="persona">Affiliate / Acquisition Manager</div>
+    <ul>
+      <li>Cut CAC. Keep Your FTDs</li><li>62,000+ Verified FTDs</li><li>Full Attribution, No Guesswork</li>
+      <li>iGaming Hub, 25+ Countries</li><li>Verified FTDs, Not Estimates</li><li>Track Deposits, Not Clicks</li><li>See Which Channel Pays</li>
+    </ul>
+    <div class="cta">CTA → Get a Free Channel Audit</div>
+  </div>
+  <div class="rsa">
+    <h4>B · Sponsorship Done Right</h4>
+    <div class="persona">Head of Sponsorship / Brand</div>
+    <ul>
+      <li>Sponsorship Done Right</li><li>25+ Markets, One Partner</li><li>Vetted Global Sponsor Network</li>
+      <li>Compliant Sponsorships</li><li>From Activation to Attribution</li><li>Track Your Sponsorship ROI</li>
+    </ul>
+    <div class="cta">CTA → Talk to Our Sponsorship Team</div>
+  </div>
+  <div class="rsa">
+    <h4>C · Regulatory Risk Review</h4>
+    <div class="persona">cross-persona · gancho do projeto de lei BR</div>
+    <ul>
+      <li>Is Your Channel Mix Ready?</li><li>Brazil Bill Threatens IG Ads</li><li>Diversify Before It Passes</li>
+      <li>One Channel Isn't a Strategy</li><li>Don't Bet on One Channel</li><li>Get a Channel Risk Review</li>
+    </ul>
+    <div class="cta">CTA → Get a Free Channel Review</div>
+  </div>
+
+  <h2><span class="n">04</span> Meta + Telegram · teste (Fase 2)</h2>
+  <div class="callout info">Os criativos de Meta/IG da Carol (Reels, Carrossel, Instant Form) miram <b>creators/influenciadores (recrutamento)</b> — público e objetivo <b>diferentes</b> do decisor B2B. Frente separada, tratada quando ativar.</div>
+
+  <h2><span class="n">05</span> Ângulos & prazos</h2>
+  <div class="card">
+    <p><strong>Ângulos-mãe (base: doc da Carol):</strong> Proof/Atribuição (62k+ FTDs) · Cut CAC · Não depender de um canal · Risco regulatório (lei BR) · Sponsorship · Entrada segura em mercados. Autoridade = founder <strong>Luiz</strong>.</p>
+    <p><strong>Prazos (call 21/07):</strong> criativos = prioridade nº 1 · tudo no ar até <strong>sexta</strong> · Hero Video essa semana.</p>
+    <p><strong>Go-live faseado:</strong> topo (estático + carrossel) primeiro pra construir audiência; lead/retargeting/vídeo conforme o público aquece e o tracking do form validar.</p>
+  </div>
+
+  <footer>
+    <span>Ghost Lab7 · Performance · confidencial (cliente sob NDA)</span>
+    <span>v1 · 2026-07-21 · pós call Onboarding #03</span>
+  </footer>
+</div>
+</body>
+</html>
